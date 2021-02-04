@@ -1,0 +1,1 @@
+{"version":3,"file":"is-string.js","sourceRoot":"","sources":["../../src/decorators/is-string.ts"],"names":[],"mappings":";;;;AAAA,mDAA8D;AAC9D,iFAAkD;AAErC,QAAA,QAAQ,GAAG,0BAAe,CAErC;IACA,IAAI,EAAE,kBAAkB;IACxB,iBAAiB,EAAE,CAAC;IACpB,QAAQ,EAAE,0BAAQ;IAClB,YAAY;QACV,OAAO,oBAAoB,CAAC;IAC9B,CAAC;CACF,CAAC,CAAC"}

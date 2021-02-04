@@ -1,0 +1,27 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.query = exports.generateSchema = exports.Node = exports.Child = exports.IsNotEmpty = exports.ReadMyself = exports.WriteMyself = exports.Write = exports.Read = exports.IsString = void 0;
+require("reflect-metadata");
+var is_string_1 = require("./decorators/is-string");
+Object.defineProperty(exports, "IsString", { enumerable: true, get: function () { return is_string_1.IsString; } });
+var read_1 = require("./decorators/read");
+Object.defineProperty(exports, "Read", { enumerable: true, get: function () { return read_1.Read; } });
+var write_1 = require("./decorators/write");
+Object.defineProperty(exports, "Write", { enumerable: true, get: function () { return write_1.Write; } });
+var write_myself_1 = require("./decorators/write-myself");
+Object.defineProperty(exports, "WriteMyself", { enumerable: true, get: function () { return write_myself_1.WriteMyself; } });
+var read_myself_1 = require("./decorators/read-myself");
+Object.defineProperty(exports, "ReadMyself", { enumerable: true, get: function () { return read_myself_1.ReadMyself; } });
+var is_not_empty_1 = require("./decorators/is-not-empty");
+Object.defineProperty(exports, "IsNotEmpty", { enumerable: true, get: function () { return is_not_empty_1.IsNotEmpty; } });
+var child_1 = require("./decorators/child");
+Object.defineProperty(exports, "Child", { enumerable: true, get: function () { return child_1.Child; } });
+var node_1 = require("./decorators/node");
+Object.defineProperty(exports, "Node", { enumerable: true, get: function () { return node_1.Node; } });
+var generate_schema_1 = require("./generate-schema");
+Object.defineProperty(exports, "generateSchema", { enumerable: true, get: function () { return generate_schema_1.generateSchema; } });
+var query_1 = require("./query");
+Object.defineProperty(exports, "query", { enumerable: true, get: function () { return query_1.query; } });
+//import { test } from "./test";
+//test();
+//# sourceMappingURL=index.js.map
