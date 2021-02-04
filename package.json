@@ -8,6 +8,9 @@
     "build": "tsc",
     "generate-schema": "cross-env TS_NODE_FILES=true TS_NODE_TRANSPILE_ONLY=true ts-node src/script-generate-schema.ts"
   },
+  "bin": {
+    "firebase-generate-schema": "./dist/script-generate-schema.js"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
