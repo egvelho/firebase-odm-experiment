@@ -4,7 +4,7 @@ import {
   isObject,
 } from "class-validator";
 
-export default function Child(
+export function Child(
   propertyObject: Object,
   validationOptions?: ValidationOptions
 ) {

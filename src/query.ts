@@ -1,10 +1,12 @@
 import { AxiosResponse } from "axios";
-import { ValidationError } from "class-validator";
 import { client, validatedClient, ClientConfig, MaybeOutput } from "./client";
 
-const baseURL = "https://orientou-com.firebaseio.com/";
+const baseURL =
+  process.env.NEXT_PUBLIC_FIREBASE_DATABASE_URL ??
+  process.env.REACT_APP_FIREBASE_DATABASE_URL ??
+  process.env.FIREBASE_DATABASE_URL;
 
-export default function query<T extends Object>(
+export function query<T extends Object>(
   object: T,
   key: keyof T,
   arg: string = key as string,

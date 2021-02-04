@@ -1,4 +1,6 @@
-export default function generateSchema(object: Object) {
+import "reflect-metadata";
+
+export function generateSchema(object: Object) {
   const name: string = Reflect.getMetadata("name", object);
 
   if (!name) {

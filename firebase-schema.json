@@ -1,1 +1,0 @@
-{"rules":{"users":{"$uid":{"teste":{".validate":"newData.isString()"},"teste2":{".validate":"newData.isString()"},".validate":"true && newData.hasChildren(['teste']) && newData.hasChildren(['teste2'])",".write":true,".read":true},".write":true,".read":true,".validate":true}}}

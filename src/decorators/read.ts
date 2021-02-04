@@ -1,6 +1,6 @@
 import createRule from "../create-rule";
 
-export default createRule({
+export const Read = createRule({
   type: "read",
   firebaseRule() {
     return true;

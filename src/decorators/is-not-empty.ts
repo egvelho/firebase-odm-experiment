@@ -1,7 +1,7 @@
 import { isNotEmpty, ValidationOptions } from "class-validator";
 import createValidator from "../create-validator";
 
-export default createValidator<
+export const IsNotEmpty = createValidator<
   (validationOptions?: ValidationOptions) => never
 >({
   name: "firebaseIsNotEmpty",

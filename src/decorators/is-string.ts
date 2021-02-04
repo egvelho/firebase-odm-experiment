@@ -1,7 +1,7 @@
 import { isString, ValidationOptions } from "class-validator";
 import createValidator from "../create-validator";
 
-export default createValidator<
+export const IsString = createValidator<
   (validationOptions?: ValidationOptions) => never
 >({
   name: "firebaseIsString",

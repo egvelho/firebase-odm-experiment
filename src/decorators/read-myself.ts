@@ -1,7 +1,7 @@
 import createRule from "../create-rule";
 
-export default createRule({
-  type: "write",
+export const ReadMyself = createRule({
+  type: "read",
   firebaseRule(propertyName) {
     return `${propertyName} === auth.uid`;
   },
