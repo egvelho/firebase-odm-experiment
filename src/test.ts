@@ -31,7 +31,6 @@ const rules = new Rules();
 
 export async function test() {
   const { data } = await query(rules, "users").prop("$uid", "teste").get();
-  console.log(data);
 }
 
 export default rules;

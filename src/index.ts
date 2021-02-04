@@ -10,5 +10,5 @@ export { Node } from "./decorators/node";
 export { generateSchema } from "./generate-schema";
 export { query } from "./query";
 
-//import {test} from './test';
+//import { test } from "./test";
 //test();

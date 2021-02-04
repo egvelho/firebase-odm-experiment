@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ES2018",
+    "target": "es5",
     "module": "commonjs",
     "strict": true,
     "pretty": true,
@@ -16,7 +16,7 @@
     "emitDecoratorMetadata": true,
     "sourceMap": true,
     "skipLibCheck": true,
-    "lib": ["esnext"],
+    "lib": ["es5", "es6"],
     "baseUrl": "src",
     "typeRoots": ["node_modules/@types"],
     "declaration": true,
@@ -26,7 +26,9 @@
     "noUnusedLocals": false,
     "strictNullChecks": true,
     "allowJs": true,
+    "downlevelIteration": true,
     "isolatedModules": true,
+    "importHelpers": true,
     "outDir": "dist"
   },
   "exclude": ["node_modules"]
