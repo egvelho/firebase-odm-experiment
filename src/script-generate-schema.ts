@@ -1,4 +1,4 @@
-#!/bin/env node
+#!/usr/bin/env node
 
 import "reflect-metadata";
 import fs from "fs";
