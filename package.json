@@ -11,8 +11,8 @@
   "bin": {
     "firebase-generate-schema": "./dist/script-generate-schema.js"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "egvelho",
+  "license": "GPL-3.0",
   "dependencies": {
     "axios": "^0.21.1",
     "class-sanitizer": "^1.0.1",
