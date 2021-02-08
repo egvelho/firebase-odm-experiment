@@ -1,4 +1,13 @@
-import { Node, IsNotEmpty, IsString, Read, Write, Child, query } from "./index";
+import {
+  Node,
+  IsNotEmpty,
+  IsString,
+  Read,
+  Write,
+  Child,
+  IndexOn,
+  request,
+} from "./index";
 
 @Node("$uid")
 class User {
@@ -24,13 +33,15 @@ class Rules {
   @Child(Users)
   @Read()
   @Write()
+  @IndexOn(["teste"])
   users!: Users;
 }
 
 const rules = new Rules();
 
 export async function test() {
-  const { data } = await query(rules, "users").prop("$uid", "teste").get();
+  const { data } = await request(rules, "users").query().orderBy("teste").get();
+  console.log(data);
 }
 
 export default rules;

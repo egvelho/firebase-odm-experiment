@@ -7,8 +7,9 @@ export { ReadMyself } from "./decorators/read-myself";
 export { IsNotEmpty } from "./decorators/is-not-empty";
 export { Child } from "./decorators/child";
 export { Node } from "./decorators/node";
+export { IndexOn } from "./decorators/index-on";
 export { generateSchema } from "./generate-schema";
-export { query } from "./query";
+export { request } from "./request";
 
 //import { test } from "./test";
 //test();

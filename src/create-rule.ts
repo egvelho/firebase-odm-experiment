@@ -5,7 +5,7 @@ export default function createRule<
   firebaseRule,
   classLevel = false,
 }: {
-  type: "read" | "write";
+  type: "read" | "write" | "indexOn";
   firebaseRule: (validationArgs?: Parameters<ValidationArgs>) => any;
   classLevel?: boolean;
 }) {

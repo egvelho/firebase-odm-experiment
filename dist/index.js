@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.query = exports.generateSchema = exports.Node = exports.Child = exports.IsNotEmpty = exports.ReadMyself = exports.WriteMyself = exports.Write = exports.Read = exports.IsString = void 0;
+exports.request = exports.generateSchema = exports.IndexOn = exports.Node = exports.Child = exports.IsNotEmpty = exports.ReadMyself = exports.WriteMyself = exports.Write = exports.Read = exports.IsString = void 0;
 require("reflect-metadata");
 var is_string_1 = require("./decorators/is-string");
 Object.defineProperty(exports, "IsString", { enumerable: true, get: function () { return is_string_1.IsString; } });
@@ -18,10 +18,12 @@ var child_1 = require("./decorators/child");
 Object.defineProperty(exports, "Child", { enumerable: true, get: function () { return child_1.Child; } });
 var node_1 = require("./decorators/node");
 Object.defineProperty(exports, "Node", { enumerable: true, get: function () { return node_1.Node; } });
+var index_on_1 = require("./decorators/index-on");
+Object.defineProperty(exports, "IndexOn", { enumerable: true, get: function () { return index_on_1.IndexOn; } });
 var generate_schema_1 = require("./generate-schema");
 Object.defineProperty(exports, "generateSchema", { enumerable: true, get: function () { return generate_schema_1.generateSchema; } });
-var query_1 = require("./query");
-Object.defineProperty(exports, "query", { enumerable: true, get: function () { return query_1.query; } });
+var request_1 = require("./request");
+Object.defineProperty(exports, "request", { enumerable: true, get: function () { return request_1.request; } });
 //import { test } from "./test";
 //test();
 //# sourceMappingURL=index.js.map

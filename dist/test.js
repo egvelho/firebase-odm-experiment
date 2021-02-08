@@ -42,6 +42,7 @@ var Rules = /** @class */ (function () {
         index_1.Child(Users),
         index_1.Read(),
         index_1.Write(),
+        index_1.IndexOn(["teste"]),
         tslib_1.__metadata("design:type", Users)
     ], Rules.prototype, "users", void 0);
     Rules = tslib_1.__decorate([
@@ -55,9 +56,10 @@ function test() {
         var data;
         return tslib_1.__generator(this, function (_a) {
             switch (_a.label) {
-                case 0: return [4 /*yield*/, index_1.query(rules, "users").prop("$uid", "teste").get()];
+                case 0: return [4 /*yield*/, index_1.request(rules, "users").query().orderBy("teste").get()];
                 case 1:
                     data = (_a.sent()).data;
+                    console.log(data);
                     return [2 /*return*/];
             }
         });
