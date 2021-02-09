@@ -1,5 +1,3 @@
-#!/usr/bin/env ts-node-script
-
 import "reflect-metadata";
 import fs from "fs";
 import path from "path";

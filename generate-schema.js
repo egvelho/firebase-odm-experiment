@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const path = require("path");
 
 function findCommon(str1, str2) {
