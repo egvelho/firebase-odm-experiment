@@ -10,3 +10,4 @@ export { Node } from "./decorators/node";
 export { IndexOn } from "./decorators/index-on";
 export { generateSchema } from "./generate-schema";
 export { request } from "./request";
+export { useForm } from "./use-form";

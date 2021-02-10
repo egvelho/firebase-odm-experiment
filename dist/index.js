@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.request = exports.generateSchema = exports.IndexOn = exports.Node = exports.Child = exports.IsNotEmpty = exports.ReadMyself = exports.WriteMyself = exports.Write = exports.Read = exports.IsString = void 0;
+exports.useForm = exports.request = exports.generateSchema = exports.IndexOn = exports.Node = exports.Child = exports.IsNotEmpty = exports.ReadMyself = exports.WriteMyself = exports.Write = exports.Read = exports.IsString = void 0;
 require("reflect-metadata");
 var is_string_1 = require("./decorators/is-string");
 Object.defineProperty(exports, "IsString", { enumerable: true, get: function () { return is_string_1.IsString; } });
@@ -24,6 +24,8 @@ var generate_schema_1 = require("./generate-schema");
 Object.defineProperty(exports, "generateSchema", { enumerable: true, get: function () { return generate_schema_1.generateSchema; } });
 var request_1 = require("./request");
 Object.defineProperty(exports, "request", { enumerable: true, get: function () { return request_1.request; } });
+var use_form_1 = require("./use-form");
+Object.defineProperty(exports, "useForm", { enumerable: true, get: function () { return use_form_1.useForm; } });
 //import { test } from "./test";
 //test();
 //# sourceMappingURL=index.js.map
