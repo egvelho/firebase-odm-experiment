@@ -9,16 +9,19 @@ function client(input, config) {
     var _a, _b;
     if (config === void 0) { config = {}; }
     return tslib_1.__awaiter(this, void 0, void 0, function () {
-        var data, params, response;
+        var data, paramsWithoutToken, tokenParam, params, response;
         return tslib_1.__generator(this, function (_c) {
             switch (_c.label) {
                 case 0:
                     data = ["POST", "PUT", "PATCH"].includes((_a = config.method) !== null && _a !== void 0 ? _a : "")
                         ? input
                         : undefined;
-                    params = ["GET", "DELETE"].includes((_b = config.method) !== null && _b !== void 0 ? _b : "")
+                    paramsWithoutToken = ["GET", "DELETE"].includes((_b = config.method) !== null && _b !== void 0 ? _b : "")
                         ? input
                         : undefined;
+                    tokenParam = config.token ? { auth: config.token } : undefined;
+                    params = paramsWithoutToken
+                        ? tslib_1.__assign(tslib_1.__assign({}, paramsWithoutToken), tokenParam) : tokenParam;
                     return [4 /*yield*/, axios_1.default.request(tslib_1.__assign({ headers: {
                                 "Content-Type": "application/json",
                             }, baseURL: config.baseURL, validateStatus: validateStatus, url: config.url, data: data,

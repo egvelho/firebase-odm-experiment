@@ -26,9 +26,15 @@ export async function client<Input, Output>(
     ? input
     : undefined;
 
-  const params = ["GET", "DELETE"].includes(config.method ?? "")
+  const paramsWithoutToken = ["GET", "DELETE"].includes(config.method ?? "")
     ? input
     : undefined;
+
+  const tokenParam = config.token ? { auth: config.token } : undefined;
+
+  const params = paramsWithoutToken
+    ? { ...paramsWithoutToken, ...tokenParam }
+    : tokenParam;
 
   const response = await axios.request<Output>({
     headers: {
