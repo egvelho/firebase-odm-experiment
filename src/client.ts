@@ -30,7 +30,19 @@ export async function client<Input, Output>(
     ? input
     : undefined;
 
-  const tokenParam = config.token ? { auth: config.token } : undefined;
+  const tokenParam =
+    config.token ??
+    // @ts-ignore
+    (typeof window !== "undefined" && (window.token as string))
+      ? {
+          auth:
+            config.token ??
+            // @ts-ignore
+            (typeof window !== "undefined" &&
+              // @ts-ignore
+              (window.token as string | undefined)),
+        }
+      : undefined;
 
   const params = paramsWithoutToken
     ? { ...paramsWithoutToken, ...tokenParam }

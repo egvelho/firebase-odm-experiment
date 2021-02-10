@@ -6,12 +6,12 @@ var axios_1 = tslib_1.__importDefault(require("axios"));
 var class_transformer_1 = require("class-transformer");
 var class_validator_1 = require("class-validator");
 function client(input, config) {
-    var _a, _b;
+    var _a, _b, _c, _d;
     if (config === void 0) { config = {}; }
     return tslib_1.__awaiter(this, void 0, void 0, function () {
         var data, paramsWithoutToken, tokenParam, params, response;
-        return tslib_1.__generator(this, function (_c) {
-            switch (_c.label) {
+        return tslib_1.__generator(this, function (_e) {
+            switch (_e.label) {
                 case 0:
                     data = ["POST", "PUT", "PATCH"].includes((_a = config.method) !== null && _a !== void 0 ? _a : "")
                         ? input
@@ -19,7 +19,16 @@ function client(input, config) {
                     paramsWithoutToken = ["GET", "DELETE"].includes((_b = config.method) !== null && _b !== void 0 ? _b : "")
                         ? input
                         : undefined;
-                    tokenParam = config.token ? { auth: config.token } : undefined;
+                    tokenParam = ((_c = config.token) !== null && _c !== void 0 ? _c : 
+                    // @ts-ignore
+                    (typeof window !== "undefined" && window.token)) ? {
+                        auth: (_d = config.token) !== null && _d !== void 0 ? _d : 
+                        // @ts-ignore
+                        (typeof window !== "undefined" &&
+                            // @ts-ignore
+                            window.token),
+                    }
+                        : undefined;
                     params = paramsWithoutToken
                         ? tslib_1.__assign(tslib_1.__assign({}, paramsWithoutToken), tokenParam) : tokenParam;
                     return [4 /*yield*/, axios_1.default.request(tslib_1.__assign({ headers: {
@@ -27,7 +36,7 @@ function client(input, config) {
                             }, baseURL: config.baseURL, validateStatus: validateStatus, url: config.url, data: data,
                             params: params }, config))];
                 case 1:
-                    response = _c.sent();
+                    response = _e.sent();
                     return [2 /*return*/, response];
             }
         });
