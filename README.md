@@ -1,3 +1,3 @@
-# firebase-odm-experience
+# firebase-odm-experiment
 
-End-to-end typing and ODM for Firebase Realtime Database REST API.
+Experiment with end-to-end typing and ODM for Firebase Realtime Database REST API.
