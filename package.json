@@ -1,7 +1,7 @@
 {
   "name": "firebase-odm-experiment",
   "version": "1.0.0",
-  "description": "Experiment with end-to-end typing and ODM for Firebase Realtime Database REST API.",
+  "description": "A experimental universal typescript end-to-end typed ODM for Firebase Realtime Database REST API",
   "main": "dist/index.js",
   "scripts": {
     "dev": "cross-env TS_NODE_FILES=true TS_NODE_TRANSPILE_ONLY=true nodemon -x ts-node src/index.ts -e ts -w .",
