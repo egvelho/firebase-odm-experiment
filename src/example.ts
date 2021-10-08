@@ -39,9 +39,4 @@ class Rules {
 
 const rules = new Rules();
 
-export async function test() {
-  const { data } = await request(rules, "users").query().orderBy("teste").get();
-  console.log(data);
-}
-
 export default rules;
