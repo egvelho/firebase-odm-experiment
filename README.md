@@ -57,6 +57,7 @@ After creating the schema class, execute ```npm run generate-schema path/to/rule
 This lib uses the Firebase Realtime Database REST API instead of the WebSocket tunnel. To execute a simple query:
 
 ```typescript
+import { request } from "firebase-odm-experiment";
 import rules from './rules.ts';
 
 const { data } = await request(rules, "users").query().orderBy("name").get();
