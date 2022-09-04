@@ -46,6 +46,7 @@ class Rules {
   users!: Users;
 }
 
+const rules = new Rules();
 export default rules;
 ```
 
