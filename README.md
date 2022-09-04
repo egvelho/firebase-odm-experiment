@@ -1,4 +1,4 @@
-# A experiment with universal typescript end-to-end typed ODM for Firebase Realtime Database REST API.
+# An experiment with universal typescript end-to-end typed ODM for Firebase Realtime Database REST API.
 
 Experimental and incomplete code-first approach to represent and query a Firebase Realtime Database. The schema is generated based in a class with decorated properties, similar to what TypeORM does. The code is universal, which means that it can be used inside a REST API as a normal ODM with server permissions, or direct in the client, avoiding unnecessary load in the server to query simple data.
 
